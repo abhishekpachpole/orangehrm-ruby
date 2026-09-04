@@ -22,7 +22,8 @@ class AdminPage
     find('[role="option"]', text: user_role, exact_text: true).click
 
     find(EMPLOYEE_NAME).fill_in(with: employee_name)
-    first('[role="option"]', text: employee_name).click
+    sleep(5)
+    first('[role="option"]').click
 
     all(SELECT_TEXT)[1].click
     find('[role="option"]', text: status, exact_text: true).click
